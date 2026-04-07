@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RPG Character Generator</string>
+    <string name="points_spent_format">Points spent: %1$d</string>
+    <string name="points_remaining_format">Points remaining: %1$d</string>
+</resources>

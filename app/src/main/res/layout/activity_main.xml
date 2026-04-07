@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundCream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RPG Character Generator"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/deepBrown"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- MAIN ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- LEFT SIDE -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/bg_panel"
+                android:layout_marginEnd="8dp">
+
+                <!-- Portrait -->
+                <ImageView
+                    android:id="@+id/imagePortrait"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_default_portrait"
+                    android:background="@drawable/portrait_frame"
+                    android:contentDescription="Character portrait" />
+
+                <!-- Class -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown"
+                    android:layout_marginTop="12dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- Gender -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown"
+                    android:layout_marginTop="12dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/radioFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female" />
+
+                    <RadioButton
+                        android:id="@+id/radioOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- RIGHT SIDE -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/bg_panel"
+                android:layout_marginStart="8dp">
+
+                <!-- Name -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Character Name"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown" />
+
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter name" />
+
+                <!-- Species -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Species"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown"
+                    android:layout_marginTop="12dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerSpecies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- Points -->
+                <TextView
+                    android:id="@+id/textPointsSpent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Points spent: 100"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/textPointsRemaining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Points remaining: 0"
+                    android:textStyle="bold"
+                    android:textColor="@color/forestGreen"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Strength -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Strength"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown" />
+
+                <SeekBar
+                    android:id="@+id/seekStrength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textStrengthValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25" />
+
+                <!-- Intelligence -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intelligence"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown" />
+
+                <SeekBar
+                    android:id="@+id/seekIntelligence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textIntelligenceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25" />
+
+                <!-- Dexterity -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dexterity"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown" />
+
+                <SeekBar
+                    android:id="@+id/seekDexterity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textDexterityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25" />
+
+                <!-- Wisdom -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wisdom"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepBrown" />
+
+                <SeekBar
+                    android:id="@+id/seekWisdom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textWisdomValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
