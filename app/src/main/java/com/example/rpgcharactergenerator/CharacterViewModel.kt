@@ -73,6 +73,7 @@ fun setSpecies(index: Int) {
 
 fun setGender(selectedGender: String) {
     _gender.value = selectedGender
+    updatePortrait(selectedClassIndex.value ?: 0)
 }
 
 fun updateStrength(newValue: Int) {
@@ -123,11 +124,11 @@ private fun recalculatePoints() {
 
 private fun updatePortrait(classIndex: Int) {
     _portraitResId.value = when (classIndex) {
-        1 -> R.drawable.barbarian_portrait
-        2 -> R.drawable.cleric_portrait
-        3 -> R.drawable.rogue_portrait
-        4 -> R.drawable.ranger_portrait
-        5 -> R.drawable.wizard_portrait
+        1 -> if (_gender.value == "Female") R.drawable.girl_barbarian else if (_gender.value == "Male") R.drawable.barbarian_portrait else R.drawable.other_barbarian
+        2 -> if (_gender.value == "Female") R.drawable.cleric_portrait else if (_gender.value == "Male") R.drawable.male_cleric else R.drawable.other_cleric
+        3 -> if (_gender.value == "Female") R.drawable.female_rouge else if (_gender.value == "Male") R.drawable.rogue_portrait else R.drawable.other_rouge
+        4 -> if (_gender.value == "Female") R.drawable.female_ranger else if (_gender.value == "Male") R.drawable.ranger_portrait else R.drawable.other_ranger
+        5 -> if (_gender.value == "Female") R.drawable.female_wizard else if (_gender.value == "Male") R.drawable.wizard_portrait else R.drawable.other_wizard
         else -> R.drawable.ic_default_portrait
     }
 }

@@ -2,4 +2,21 @@
     <string name="app_name">RPG Character Generator</string>
     <string name="points_spent_format">Points spent: %1$d</string>
     <string name="points_remaining_format">Points remaining: %1$d</string>
+    <string name="character_portrait">Character portrait</string>
+    <string name="class_">Class</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="character_name">Character Name</string>
+    <string name="enter_name">Enter name</string>
+    <string name="species">Species</string>
+    <string name="points_spent_100">Points spent: 100</string>
+    <string name="points_remaining_0">Points remaining: 0</string>
+    <string name="strength">Strength</string>
+    <string name="_25">25</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="dexterity">Dexterity</string>
+    <string name="wisdom">Wisdom</string>
+    <string name="rpg_character_generator">RPG Character Generator</string>
 </resources>
